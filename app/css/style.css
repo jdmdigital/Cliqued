@@ -1,0 +1,58 @@
+/* Main Styles for v0.2 */
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url('../fonts/roboto-regular-webfont.woff2') format('woff2'),  url('../fonts/roboto-regular-webfont.woff') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+footer .container{text-align:center;}
+#main h2{text-align:center;}
+header{background-color:#559BBF; min-height:70vh; color:#fff; padding-top:15px; padding-bottom:15px;}
+header .popover{color:#000;}
+.popover-content{font-size:0.9em;}
+header h1{text-transform:uppercase; text-align:center; font-size:15vw; font-weight:bold;}
+@media (min-width: 530px) {
+    header h1 {font-size:13vw;}
+}
+@media (min-width: 768px) {
+    header h1 {font-size:8vw;}
+}
+@media (min-width: 1200px) {
+    header h1 {font-size:6vw;}
+}
+header p{text-align:center;}
+footer h2{color:#E45212;}
+header .container{margin-top:10vh;}
+#main{background-color:#F7FBFD; padding-top:0; padding-bottom:13px;}
+footer{background-color:#fff; padding-top:15px; padding-bottom:15px; border-top:1px solid #f3f3f3;}
+footer .list-inline {font-size:0.9em;}
+footer .list-inline a{color:#777;}
+footer .list-inline a:hover, footer .list-inline a:focus{color:#555;}
+.required{color:#E45212; margin-left:2px;}
+#step1{opacity:1;}
+.step{display:none; opacity:0;}
+.step.current{display:block;}
+header .form-control:focus{color:#ee6123; border-color:#E45212; background-color:#fef7f4; box-shadow:0 0 0 1px rgba(238, 97, 35, 0.75), 0 0 4px 2px rgba(238, 97, 35, 0.2), 0 1px 2px 0 rgba(238, 97, 35, 0.2) inset;}
+header .has-error .form-control{color:#a94442; background-color:#fef7f4; box-shadow:0 0 0 1px rgba(169, 68, 66, 0.75), 0 0 4px 2px rgba(169, 68, 66, 0.2), 0 1px 2px 0 rgba(169, 68, 66, 0.2) inset;}
+header .has-error .form-control:focus{background-color:#fff;}
+header .has-error .input-group-btn .btn-primary {background-color:#a94442; border-color:#a94442;}
+header .has-error .help-block{color:#993937;}
+header .btn-link{color:#f8f8f8;}
+header .btn-link:hover, header .btn-link:focus, header .btn-link:active{color:#fff;}
+header p.help-block {color:rgba(255,255,255,0.6); font-size:0.9em; text-align:left;}
+.form-group label{font-size:0.7em; text-transform:uppercase; text-align:left; letter-spacing:1px;}
+.form-group a[data-toggle="popover"]{text-align:left; font-size:0.7em; color:#eee; margin-left:10px;}
+.form-group a[data-toggle="popover"]:hover, .form-group a[data-toggle="popover"]:focus{color:#fff;}
+p small{font-size:0.7em;}
+.nodisplay{display:none;}
+.btn-fw{min-width:190px;}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{background-color:#f0f0f0;}
+.btn-row {display:block; text-align:center;}
+.btn-row .btn{margin-left:15px; margin-right:15px; margin-bottom:15px;}
+.btn.loading, .btn.loading:hover, .btn.loading:focus:hover{cursor:progress;}
+.alert {margin-top:15px;}
+.alert h3{margin-top:0;}
+.alert p{margin-bottom:0;}
