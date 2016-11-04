@@ -1,6 +1,8 @@
 # Cliqued
 A simple web app for easily creating Bitly shortened URLs that include parameters tracked in Google Analytics Custom Campaigns.
 
+![clicked screenshot](https://jdmdigital.co/cliqued/app/cliqued-screenshot.png)
+
 Cliqued is a simple (looking) web app for easily creating [Bitly](https://bitly.com/) URLs that include parameters tracked in Google Analytics [Custom Campaigns](https://support.google.com/analytics/answer/1033863).  We're looking to add other shortening services too, like goo.gl.
 
 ## Getting Started
