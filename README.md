@@ -10,6 +10,7 @@ You'll want to descide on which URL shortening service you want to use.  As of v
 
 ### Get the Keys
 First off, you'll need to get your Bitly API Login and Key to use Bitly as your URL shortening service.
+
 1. Create a Bitly account (if you haven't already)
 2. Login to Bitly
 3. Click the Hamburger **Menu**
@@ -17,7 +18,7 @@ First off, you'll need to get your Bitly API Login and Key to use Bitly as your 
 5. There, you can create or get your API **Login** and API **Key**
 
 ### Edit the Settings
-Next up, we'll want to make changes and updates to the web app settings file.  You guessed it, these are made in the file, app/settings.php.
+Next up, we'll want to make changes and updates to the web app settings file.  You guessed it, these are made in the file, `app/settings.php`.
 
 1. Open `settings.php` in your favorite editor.
 2. Change `define("DEMO", **true**);` to `define("DEMO", **false**);`
