@@ -1,9 +1,14 @@
 # Cliqued
-A simple web app for easily creating Bitly shortened URLs that include parameters tracked in Google Analytics Custom Campaigns.
+A simple web app for easily creating Bitly shortened URLs that include parameters tracked in Google Analytics Custom Campaigns. Live demo at: https://jdmdig.it/cliqued
 
 ![Cliqued screenshot](https://jdmdigital.co/cliqued/cliqued-screenshot.png)
 
-Cliqued is a simple (looking) web app for easily creating [Bitly](https://bitly.com/) URLs that include parameters tracked in Google Analytics [Custom Campaigns](https://support.google.com/analytics/answer/1033863).  We're looking to add other shortening services too, like goo.gl.
+Cliqued is a simple (looking) web app for easily creating [Bitly](https://bitly.com/) URLs that include parameters tracked in Google Analytics [Custom Campaigns](https://support.google.com/analytics/answer/1033863).  We're looking to add other shortening services too, like goo.gl. 
+
+## Demo
+There is a demo avaliable for you to check out.  See: https://jdmdig.it/cliqued. 
+
+**NOTE:** The demo is in "demo mode" so the short URL it generates is always the same and redirects right back to the demo itself.  See the section below for how to disable demo mode.
 
 ## Getting Started
 Once you've downloaded the ZIP of this repo, navigate to the file in `app/settings.php` to get started.
