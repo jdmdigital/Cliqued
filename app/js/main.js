@@ -1,11 +1,17 @@
 /*
  * Cliqued App
- * v0.2
+ * v0.2.1
  */
  
 // "borrowed" from jquery validation plugin
 function isUrlValid(url) {
     return /^(https?|s?ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test(url);
+}
+
+// Replace spaces with underscores
+// @since v0.2.1
+function strEncode(str) {
+	return str.split(' ').join('_');
 }
 
 // Takes the data entered and converts it to GA UTC link (long link) 
@@ -28,26 +34,26 @@ function buildUTC() {
 	}
 	
 	if(campaignSource != '') {
-		theurl = theurl + 'utm_source=' + campaignSource;
+		theurl = theurl + 'utm_source=' + strEncode(campaignSource);
 	} else {
 		goodBuild = false;
 		$('#campaign-source').parent().addClass('has-error');
 	}
 	
 	if(campaignName != '') {
-		theurl = theurl + '&utm_campaign=' + campaignName;
+		theurl = theurl + '&utm_campaign=' + strEncode(campaignName);
 	}
 	
 	if(campaignMedium != '') {
-		theurl = theurl + '&utm_medium=' + campaignMedium;
+		theurl = theurl + '&utm_medium=' + strEncode(campaignMedium);
 	}
 	
 	if(campaignTerm != '') {
-		theurl = theurl + '&utm_term=' + campaignTerm;
+		theurl = theurl + '&utm_term=' + strEncode(campaignTerm);
 	}
 	
 	if(campaignContent != '') {
-		theurl = theurl + '&utm_content=' + campaignContent;
+		theurl = theurl + '&utm_content=' + strEncode(campaignContent);
 	}
 	
 	if(goodBuild) {
